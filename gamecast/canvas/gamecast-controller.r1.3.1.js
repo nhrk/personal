@@ -48,7 +48,7 @@ $(document).ready(function(){
 	};
 	
 	//disable cross domain request on prod
-	if(window.location.href.indexOf('http://www.espnfc.com') != -1 || window.location.href.indexOf('http://espnfc.com') != -1){
+	if(/^http:\/\/(www|).?espnfc.(com|us|co.uk)/.test(window.location.href)){
 		gameCastOptions.config.Timeline.url = '/gamepackage10/data/timeline?gameId=' + matchId +  '&langId=' + langId + '&snap=0';
 		gameCastOptions.config.Timeline.xdomain = false;
 		gameCastOptions.config.Field.url = '/gamepackage10/data/gamecast?gameId=' + matchId +  '&langId=' + langId + '&snap=0';
