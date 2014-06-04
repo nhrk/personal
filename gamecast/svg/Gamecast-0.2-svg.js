@@ -190,7 +190,7 @@
 					$('.gamecastKey').html($('.gamecastKey').html().replace('Shot', 'Disparo').replace('Goal', 'Gol'));
 				}
 
-				if (Gamecast.edition == 'us' && window.country == 'united states') {
+				if (window.country == 'united states') {
 					
 					$('.videoIcon').css('display', 'inline');
 
@@ -935,7 +935,7 @@
 
 						shotsHolder.push(circle,circleShadow);
 
-						if (obj[i].videoId && Gamecast.edition == 'us' && window.country == 'united states') {
+						if (obj[i].videoId && window.country == 'united states') {
 
 							var playArrow = fieldPaper.triangle(left - 1.5, top-1.5, 5).toFront().attr({
 								fill: "#fff",
@@ -1140,7 +1140,7 @@
 
 					(function(i) {
 
-						if (obj[i].videoId && Gamecast.edition == 'us' && window.country == 'united states') {
+						if (obj[i].videoId && window.country == 'united states') {
 							var videoId = obj[i].videoId;
 
 							var playArrow = fieldPaper.triangle(isHome ? (count * 20) - 20 + baseConfig.leftGutter : (baseConfig.width + 20 - baseConfig.leftGutter) - (count * 20) - 1, baseConfig.height - (55 * ((row == 2) ? 0.5 : row)) -2, 5).toFront().attr({
@@ -2201,7 +2201,7 @@
 				timelineAxis.push(clockPointer);
 			}
 
-			if (eventNode.videoId && Gamecast.edition == 'us' && window.country == 'united states') {
+			if (eventNode.videoId && window.country == 'united states') {
 
 				var playX = x + 3 - 8 + 2;
 				var playY = y + 5 - 16

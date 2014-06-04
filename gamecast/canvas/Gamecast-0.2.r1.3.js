@@ -338,7 +338,7 @@
 					$('.gamecastKey').html($('.gamecastKey').html().replace('Shot','Disparo').replace('Goal','Gol'));
 				}
 				
-				if(Gamecast.edition == 'us' && window.country == 'united states'){
+				if(window.country == 'united states'){
 
 					$('.videoIcon').css('display','inline');
 
@@ -1158,7 +1158,7 @@
 						
 						container.addChild(player);
 						
-						if(obj[i].videoId && Gamecast.edition == 'us' && window.country == 'united states'){
+						if(obj[i].videoId && window.country == 'united states'){
 							playArrow = new Shape();
 							playArrow.graphics.beginFill('#fff');
 							playArrow.graphics.drawPolyStar( left + 0.5, top, 3.5, 3, 0.5, 0 );
@@ -1340,7 +1340,7 @@
 							renderPlay(String(obj[i].id),true);
 						}
 						
-						if(obj[i].videoId && Gamecast.edition == 'us' && window.country == 'united states'){
+						if(obj[i].videoId && window.country == 'united states'){
 							var playArrow = new Shape();
 							playArrow.graphics.beginFill('#fff');
 							playArrow.graphics.drawPolyStar( player.x + 0.5, player.y, 3.5, 3, 0.5, 0 );
@@ -2459,7 +2459,7 @@
 			eventImg.clock = clock;
 			eventImg.side = eventNode.side;
 			
-			if(eventNode.videoId && Gamecast.edition == 'us' && window.country == 'united states'){
+			if(eventNode.videoId && window.country == 'united states'){
 				var play = new Bitmap(daddyUrl + 'play_icon.png');
 				play.x = x + 3 - 8 + 2;  //(x+3) : x of pointer , 0.5 pointer of radius, 8: 1/2 img w
 				play.y = y + 5 - 15;
