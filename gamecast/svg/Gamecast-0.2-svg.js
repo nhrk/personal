@@ -1035,17 +1035,17 @@
 				playWatch.embeded = true;
 			}
 
-			var opts = {'endCard': "false", 'cms': 'intl'};
+			var opts = {"id": id, 'endCard': "false", 'cms': 'intl','player': "espnFCgameCast",'width': 585,'height': 374, "targetReplaceId" : "videoPlayer"};
+
 
 			if(Gamecast.sessionId == 'uefa.euro-gp10' && Gamecast.season == "2012"){
 				//videos for euros come from ESPN cms
 				opts.cms = 'espn';
 			}
 
-			espn.video.play(id,opts);
+			// espn.video.play(id,opts);
 
-			// Hotfix to switch videos (Needs to be fixed in the video lib)
-			document.getElementById("videoPlayer").setEmbedCode(document.getElementById("videoPlayer").getEmbedCode());
+			espn.video.embed(opts);
 			
 			if(playId){
 				lastVideoPlayed = parseInt(playId);
