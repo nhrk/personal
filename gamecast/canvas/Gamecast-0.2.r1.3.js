@@ -1214,6 +1214,9 @@
 
 			espn.video.play(id,opts);
 
+			// Hotfix to switch videos (Needs to be fixed in the video lib)
+			document.getElementById("videoPlayer").setEmbedCode(document.getElementById("videoPlayer").getEmbedCode());
+
 			if(playId){
 				lastVideoPlayed = parseInt(playId);
 			}
