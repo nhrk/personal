@@ -95,9 +95,10 @@ $(document).ready(function(){
 				$('.videoplayer').height('0px');
 				$(this).hide();
 				//$('li[data-div=filterShots]').trigger('click');
-				if(Gamecast._match.gameStatusText != "V"){
+				// Trigger click to Reset selection
+				// if(Gamecast._match.gameStatusText != "V"){
 					$('li.appliedFilter').filter(':visible').trigger('click');
-				}
+				// }
 			})
 			.delegate('.activeGame .reset','click',function(){
 				if(!Gamecast._isPlaying && ($('.videoplayer').height() == 0)){
