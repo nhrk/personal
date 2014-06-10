@@ -96,9 +96,9 @@ $(document).ready(function(){
 				$(this).hide();
 				//$('li[data-div=filterShots]').trigger('click');
 				// Trigger click to Reset selection
-				// if(Gamecast._match.gameStatusText != "V"){
+				if(Gamecast._match.gameStatusText != "V"){
 					$('li.appliedFilter').filter(':visible').trigger('click');
-				// }
+				}
 				// Pause videos only after rendering field
 				espn.video.pause();
 			})
