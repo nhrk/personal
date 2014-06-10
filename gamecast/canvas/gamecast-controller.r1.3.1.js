@@ -90,7 +90,7 @@ $(document).ready(function(){
 			
 			gamecastDiv
 			.delegate('.closeWatch','click',function(){
-				espn.video.pause();
+				// espn.video.pause();
 				$('#gcField, #gcFieldVector').css('visibility','visible');
 				$('.videoplayer').height('0px');
 				$(this).hide();
@@ -99,6 +99,8 @@ $(document).ready(function(){
 				// if(Gamecast._match.gameStatusText != "V"){
 					$('li.appliedFilter').filter(':visible').trigger('click');
 				// }
+				// Pause videos only after rendering field
+				espn.video.pause();
 			})
 			.delegate('.activeGame .reset','click',function(){
 				if(!Gamecast._isPlaying && ($('.videoplayer').height() == 0)){
