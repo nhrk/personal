@@ -346,7 +346,7 @@
 						$('.closeWatch').trigger('click');
 					});
 
-					$('.tabs.rounded li:last a').click(function(){
+					/*$('.tabs.rounded li:last a').click(function(){
 						if(!Gamecast._playedAd){
 
 							if(Gamecast._videoInit){
@@ -357,10 +357,11 @@
 								});
 							}
 						}
-					});
+					});*/
 
 					espn.video.subscribe('espn.video.init', function() {
 						Gamecast._videoInit = true;
+						insertAdCode();
 					});
 
 					espn.video.subscribe('espn.video.complete', function(){
